@@ -5,7 +5,6 @@ import datetime
 
 # Load environment variables into programming variables.
 load_dotenv()
-openai_api_key = os.getenv('OPEN_AI_KEY')
 bot_api_key = os.getenv('BOT_API_KEY')
 phone = os.getenv('PHONE')
 
