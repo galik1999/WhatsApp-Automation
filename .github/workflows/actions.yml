@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '20 0 * * *' # “At 00:20.”
+    - cron: '25 0 * * *' # “At 00:25.”
 
 jobs:
   build:
@@ -23,4 +23,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script # run main.py
+        env:
+          SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: python main.py
