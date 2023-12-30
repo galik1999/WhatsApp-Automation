@@ -7,8 +7,12 @@ import datetime
 def main():
     # Load environment variables into programming variables.
     load_dotenv()
-    bot_api_key = os.getenv('BOT_API_KEY')
-    phone = os.getenv('PHONE')
+    bot_api_key = os.environ.get('BOT_API_KEY')
+    if not bot_api_key:
+        raise RuntimeError('BOT_API_KEY var is not set!')
+    phone = os.environ.get('PHONE')
+    if not phone:
+        raise RuntimeError('BOT_API_KEY var is not set!')
 
     # Get today's day and month and convert the month into a string-month.
     current_month = datetime.datetime.now().month
