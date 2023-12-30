@@ -1,10 +1,10 @@
 import requests
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import datetime
 
 # Load environment variables into programming variables.
-load_dotenv()
+# load_dotenv()
 bot_api_key = os.environ['BOT_API_KEY']
 phone = os.environ['PHONE']
 
