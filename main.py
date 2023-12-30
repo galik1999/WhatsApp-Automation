@@ -37,9 +37,9 @@ def main():
     url = f"https://api.callmebot.com/whatsapp.php?phone={phone}&text={link_url}&apikey={bot_api_key}"
 
     # Send the whatsapp message by sending a GET request for the API.
-    # response = requests.get(url)
+    response = requests.get(url)
 
-    print('OK')
+    print(response)
 
 
 if __name__ == '__main__':
