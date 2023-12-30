@@ -1,15 +1,12 @@
 import requests
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import datetime
 
 # Load environment variables into programming variables.
-# load_dotenv()
+load_dotenv()
 bot_api_key = os.environ['BOT_API_KEY']
 phone = os.environ['PHONE']
-
-# bot_api_key = os.getenv('BOT_API_KEY')
-# phone = os.getenv('PHONE')
 
 # Get today's day and month and convert the month into a string-month.
 current_month = datetime.datetime.now().month
