@@ -22,6 +22,6 @@ jobs:
 
       - name: execute py script # run main.py
         env:
-          BOT_API_KEY: ${{vars.BOT_API_KEY}}
-          PHONE: ${{vars.PHONE}}
+          BOT_API_KEY: ${{secrets.BOT_API_KEY}}
+          PHONE: ${{secrets.PHONE}}
         run: python main.py
