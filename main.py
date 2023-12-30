@@ -39,7 +39,7 @@ def main():
     # Send the whatsapp message by sending a GET request for the API.
     response = requests.get(url)
 
-    print(response)
+    print(response,url)
 
 
 if __name__ == '__main__':
