@@ -39,15 +39,22 @@ class DailyMessageBuilder:
 
     def filter_messages(self):
         def shorten(message: str):
+            flag = False
             while len(message) >= self.MAX_LEN:
                 reversed_message = message[::-1]
                 index = reversed_message.find('.')
-                message = message[:index + 1]
-            return message
+                message = message[:len(message) - index]
+                flag = True
+            if flag:
+                return message + '.'
+            else:
+                return message
 
         for i, msg in enumerate(self.messages):
             if len(msg) >= self.MAX_LEN:
+                print('before: ', self.messages[i])
                 self.messages[i] = shorten(msg)
+                print('after: ', self.messages[i])
 
         if len(self.messages) > 50:
             self.messages = self.messages[:51]
