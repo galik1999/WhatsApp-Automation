@@ -27,10 +27,11 @@ msgBuilder.filter_messages()
 print("The length of the messages which are sent to the user:", len(msgBuilder.messages))
 print(dailyScraper.intro_data_dict.keys())
 for msg in msgBuilder.messages:
-    print(len(msg) > msgBuilder.MAX_LEN)
+    print(len(msg))
 
 for msg in msgBuilder.messages:
     api_url = f"""https://api.callmebot.com/whatsapp.php?phone={phone}&text={msg}&apikey={bot_api_key}"""
+    print(msg)
     # Send the whatsapp message by sending a GET request for the API.
-    response = requests.get(api_url)
-    print(response, api_url)
+    # response = requests.get(api_url)
+    # print(response, api_url)
