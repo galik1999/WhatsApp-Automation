@@ -31,7 +31,6 @@ for msg in msgBuilder.messages:
 
 for msg in msgBuilder.messages:
     api_url = f"""https://api.callmebot.com/whatsapp.php?phone={phone}&text={msg}&apikey={bot_api_key}"""
-    print(msg)
     # Send the whatsapp message by sending a GET request for the API.
-    # response = requests.get(api_url)
-    # print(response, api_url)
+    response = requests.get(api_url)
+    print(response, api_url)
